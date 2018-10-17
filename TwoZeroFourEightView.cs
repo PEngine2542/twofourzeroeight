@@ -138,6 +138,10 @@ namespace twozerofoureight
 
         private void TwoZeroFourEightView_KeyDown(object sender, KeyEventArgs e)
         {
+            if (!KeyPreview)
+            {
+                return;
+            }
             switch (e.KeyData)
             {
                 case Keys.W:
@@ -156,6 +160,7 @@ namespace twozerofoureight
                 case Keys.Right:
                     controller.ActionPerformed(TwoZeroFourEightController. RIGHT);
                     break;
+                
             }
         }
 
@@ -163,8 +168,18 @@ namespace twozerofoureight
         {
             switch (e.KeyCode)
             {
-               
+                case Keys.Down:
+                case Keys.Up:
+                case Keys.Right:
+                case Keys.Left:
+                {
+                    e.IsInputKey = true;
+                    break;
+                }
+                    
             }
         }
+
+
     }
 }

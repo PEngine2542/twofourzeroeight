@@ -256,6 +256,8 @@
             this.btnLeft.Text = "<";
             this.btnLeft.UseVisualStyleBackColor = true;
             this.btnLeft.Click += new System.EventHandler(this.btnLeft_Click);
+            this.btnLeft.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TwoZeroFourEightView_KeyDown);
+            this.btnLeft.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.TwoZeroFourEightView_PreviewKeyDown);
             // 
             // btnUp
             // 
@@ -267,6 +269,8 @@
             this.btnUp.Text = "^";
             this.btnUp.UseVisualStyleBackColor = true;
             this.btnUp.Click += new System.EventHandler(this.btnUp_Click);
+            this.btnUp.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TwoZeroFourEightView_KeyDown);
+            this.btnUp.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.TwoZeroFourEightView_PreviewKeyDown);
             // 
             // btnRight
             // 
@@ -278,6 +282,8 @@
             this.btnRight.Text = ">";
             this.btnRight.UseVisualStyleBackColor = true;
             this.btnRight.Click += new System.EventHandler(this.btnRight_Click);
+            this.btnRight.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TwoZeroFourEightView_KeyDown);
+            this.btnRight.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.TwoZeroFourEightView_PreviewKeyDown);
             // 
             // btnDown
             // 
@@ -289,6 +295,8 @@
             this.btnDown.Text = "v";
             this.btnDown.UseVisualStyleBackColor = true;
             this.btnDown.Click += new System.EventHandler(this.btnDown_Click);
+            this.btnDown.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TwoZeroFourEightView_KeyDown);
+            this.btnDown.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.TwoZeroFourEightView_PreviewKeyDown);
             // 
             // lblscore
             // 

@@ -29,7 +29,7 @@ namespace twozerofoureight
         {
             UpdateBoard(((TwoZeroFourEightModel) m).GetBoard());
             UpdateScore(((TwoZeroFourEightModel)m).GetScore());
-            UpdateGameOver(((TwoZeroFourEightModel)m).CheckGameOver());
+            UpdateGameOver(((TwoZeroFourEightModel)m).CheckGameWin());
         }
 
         private void UpdateTile(Label l, int i)
@@ -69,7 +69,7 @@ namespace twozerofoureight
         {
             if (a)
             {
-                lblGameover.Text = "Game Over!!";
+                lblGameover.Text = "YouWin!!";
                 btnDown.Enabled = false;
                 btnLeft.Enabled = false;
                 btnRight.Enabled = false;

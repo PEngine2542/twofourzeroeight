@@ -29,7 +29,14 @@ namespace twozerofoureight
         {
             UpdateBoard(((TwoZeroFourEightModel) m).GetBoard());
             UpdateScore(((TwoZeroFourEightModel)m).GetScore());
-            UpdateGameOver(((TwoZeroFourEightModel)m).CheckGameWin());
+            if (((TwoZeroFourEightModel)m).CheckGameWin())
+            {
+                UpdateGamewin(((TwoZeroFourEightModel)m).CheckGameWin());
+            }
+            else
+            {
+                UpdateGameover(((TwoZeroFourEightModel)m).GameOver_Full());
+            }
         }
 
         private void UpdateTile(Label l, int i)
@@ -65,11 +72,27 @@ namespace twozerofoureight
             lblscore.Text = Convert.ToString(score);
         }
 
-        private void UpdateGameOver(bool a)
+        private void UpdateGamewin(bool a)
         {
             if (a)
             {
                 lblGameover.Text = "YouWin!!";
+                btnDown.Enabled = false;
+                btnLeft.Enabled = false;
+                btnRight.Enabled = false;
+                btnUp.Enabled = false;
+            }
+            else
+            {
+                lblGameover.Text = "";
+            }
+        }
+
+        private void UpdateGameover(bool a)
+        {
+            if (a)
+            {
+                lblGameover.Text = "Game Over!!";
                 btnDown.Enabled = false;
                 btnLeft.Enabled = false;
                 btnRight.Enabled = false;
